@@ -1,3 +1,4 @@
+import 'package:daviet_app/Pages/attendance_page.dart';
 import 'package:daviet_app/custom_widgets/home_page_widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -6,9 +7,7 @@ class Homepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
           extendBodyBehindAppBar: true,
           drawer: Drawer(
             child: ListView(
@@ -90,21 +89,27 @@ class Homepage extends StatelessWidget {
                                 image: "lib/images/attendance.png",
                                 title: "Attendance",
                               ),
-                              onTap: (){},
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const AttendancePage()));
+                              },
                             ),
                             InkWell(
                               child: const HomeWidget(
                                 image: "lib/images/notes.png",
                                 title: "Notes",
                               ),
-                              onTap: (){},
+                              onTap: () {},
                             ),
                             InkWell(
                               child: const HomeWidget(
                                 image: "lib/images/placement.png",
                                 title: "Placements",
                               ),
-                              onTap: (){},
+                              onTap: () {},
                             ),
                           ],
                         ),
@@ -112,25 +117,25 @@ class Homepage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             InkWell(
-                              child:const HomeWidget(
+                              child: const HomeWidget(
                                 image: "lib/images/library.png",
                                 title: "Library",
                               ),
-                              onTap: (){},
+                              onTap: () {},
                             ),
                             InkWell(
-                              child:const HomeWidget(
+                              child: const HomeWidget(
                                 image: "lib/images/scholarship.png",
                                 title: "Scholarship",
                               ),
-                              onTap: (){},
+                              onTap: () {},
                             ),
                             InkWell(
-                              child:const HomeWidget(
+                              child: const HomeWidget(
                                 image: "lib/images/map.png",
                                 title: "Map",
                               ),
-                              onTap: (){},
+                              onTap: () {},
                             ),
                           ],
                         ),
@@ -142,21 +147,21 @@ class Homepage extends StatelessWidget {
                                 image: "lib/images/hostel.png",
                                 title: "Hostel",
                               ),
-                              onTap: (){},
+                              onTap: () {},
                             ),
                             InkWell(
-                              child:const HomeWidget(
+                              child: const HomeWidget(
                                 image: "lib/images/announcement.png",
                                 title: "Announcement",
                               ),
-                              onTap: (){},
+                              onTap: () {},
                             ),
                             InkWell(
-                              child:const HomeWidget(
+                              child: const HomeWidget(
                                 image: "lib/images/clubs.png",
                                 title: "Clubs",
                               ),
-                              onTap: (){},
+                              onTap: () {},
                             ),
                           ],
                         ),
@@ -166,7 +171,7 @@ class Homepage extends StatelessWidget {
                 ],
               )
             ],
-          )),
+          ),
     );
   }
 }
