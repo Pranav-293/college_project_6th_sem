@@ -1,4 +1,5 @@
 import 'package:daviet_app/Pages/attendance_page.dart';
+import 'package:daviet_app/Pages/placement_page.dart';
 import 'package:daviet_app/custom_widgets/home_page_widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -109,7 +110,13 @@ class Homepage extends StatelessWidget {
                                 image: "lib/images/placement.png",
                                 title: "Placements",
                               ),
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                        const PlacementPage()));
+                              },
                             ),
                           ],
                         ),
